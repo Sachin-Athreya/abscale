@@ -1,0 +1,65 @@
+/* Navigation hover animation */
+.navbar_link {
+  position: relative;
+  /* display: inline-block; */
+  overflow: hidden;
+  background: linear-gradient(to right, #1bc0f5, #1bc0f5 50%, #000207 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 275ms ease;
+}
+
+.navbar_link:hover {
+  background-position: 0 100%;
+}
+
+/* For GSAP Text Animation */
+[text-split] {
+  opacity: 0;
+}
+html.w-editor [text-split] {
+  opacity: 1;
+}
+
+.word {
+  overflow: hidden;
+  padding-bottom: 0.1em;
+  margin-bottom: -0.1em;
+  transform-origin: bottom;
+}
+
+/* CSS Floating Animation */
+.footer_rocket-image {
+  animation-name: floating-rocket;
+  animation-duration: 5s;
+  animation-delay: 2.4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes floating-rocket {
+  from {
+    transform: translate(0, 0rem);
+  }
+  65% {
+    transform: translate(0, 0.5rem);
+  }
+  to {
+    transform: translate(0, -0rem);
+  }
+}
+
+/* Swiper JS Testimonials Styles */
+
+.swiper-slide.is-active .testimonials_card {
+  transform: scale(1.02);
+  border: 1px solid #3e4148;
+}
+
+.swiper-autoheight,
+.swiper-autoheight .swiper-slide {
+  height: 100% !important;
+}
